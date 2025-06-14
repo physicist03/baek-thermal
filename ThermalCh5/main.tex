@@ -664,8 +664,12 @@ A와 B가 액체 상태에서는 완전히 섞일 수 있지만, 고체 상태�
     &\approx k \left[ N_A \cdot \frac{N_B}{N_A} + N_B \ln N_A - N_B \ln N_B \right]\\
     &= k [N_B + N_B \ln N_A - N_B \ln N_B]
 \end{align}
-
-
+따라서, mixing 깁스 자유에너지는 다음과 같다.
+\begin{align}
+    G_{\text{mixing}} &= N_A \mu_0 (T,P) + dG_{\text{mixing}}\\
+    &= N_A \mu_0 (T,P) + N_B f(T,P) - N_B kT \ln N_A + N_B kT \ln N_B - N_B kT
+\end{align}
+따라서, 우리는 용매와 용질의 화학 퍼텐셜을 계산할 수 있다.
 
 
 \end{document}

@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1749854229 "c:/Users/ket16/Desktop/Sogang Univ/Mycodefiles/etc/ThermalCh5(0613)/main.tex" "main.pdf" "main" 1749854233 0
-  "c:/Users/ket16/Desktop/Sogang Univ/Mycodefiles/etc/ThermalCh5(0613)/main.tex" 1749854229 32932 4f605691bcf3aae8b1d125925c53554c ""
+["pdflatex"] 1749876287 "c:/Users/ket16/Desktop/git-notes/baek-thermal/ThermalCh5/main.tex" "main.pdf" "main" 1749876291 0
+  "c:/Users/ket16/Desktop/git-notes/baek-thermal/ThermalCh5/main.tex" 1749876286 33248 ac66c488ff9ac49d937e2e011e8f514e ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1694845491 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1694846139 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm0600.tfm" 1694845866 1536 12e8c510d3e158fdd0e9a42e75118bd9 ""
@@ -343,9 +343,9 @@
   "images/fig4_8.png" 1749844055 246840 49a35fb496bc6869c08921e1396d9617 ""
   "images/fig4_9.png" 1749845053 80005 cbee2634ffd1007cfb8b8d410757463c ""
   "images/fig5_1.png" 1749852985 111835 945127a53acaba569464f20aa42229e2 ""
-  "main.aux" 1749854232 2203 16cf3708eb9cef5ce8a0936f008d19e1 "pdflatex"
-  "main.out" 1749854232 1054 436b7b25118c168e0764c7f512eaea9f "pdflatex"
-  "main.tex" 1749854229 32932 4f605691bcf3aae8b1d125925c53554c ""
+  "main.aux" 1749876290 2203 16cf3708eb9cef5ce8a0936f008d19e1 "pdflatex"
+  "main.out" 1749876290 1054 436b7b25118c168e0764c7f512eaea9f "pdflatex"
+  "main.tex" 1749876286 33248 ac66c488ff9ac49d937e2e011e8f514e ""
   (generated)
   "main.aux"
   "main.log"

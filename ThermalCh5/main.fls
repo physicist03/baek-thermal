@@ -1,8 +1,8 @@
-PWD c:/Users/ket16/Desktop/Sogang Univ/Mycodefiles/etc/ThermalCh5(0613)
+PWD c:/Users/ket16/Desktop/git-notes/baek-thermal/ThermalCh5
 INPUT c:/texlive/2023/texmf.cnf
 INPUT c:/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT c:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/ket16/Desktop/Sogang Univ/Mycodefiles/etc/ThermalCh5(0613)/main.tex
+INPUT c:/Users/ket16/Desktop/git-notes/baek-thermal/ThermalCh5/main.tex
 OUTPUT main.log
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
 INPUT c:/texlive/2023/texmf-dist/tex/latex/base/article.cls
