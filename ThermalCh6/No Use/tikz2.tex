@@ -1,0 +1,30 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta, decorations.pathreplacing}
+
+\begin{document}
+
+\begin{tikzpicture}[>=Stealth]
+
+  % Draw the main box (system)
+  \draw[thick, rounded corners] (0,0) rectangle (3,2);
+  \node at (1.5,1.5) {\textbf{T, N, V}};
+  \node at (1.5,1.1) {\textbf{fixed}};
+
+  % Arrow and label for energy transfer
+  \draw[->, thick] (3,1.5) -- (4.2,1.5);
+  \node[anchor=south west] at (3.1,1.5) {\small Energy};
+  \node[anchor=north west] at (3.1,1.5) {\small transferable};
+
+  % External thermal reservoir box (implicit)
+  \node[anchor=west] at (4.4,1.7) {\textit{Thermal reservoir}};
+
+  % Decorative line to indicate connection (curved bracket style)
+  \draw[thick] (0,2.1) -- (0.2,2.4)
+               (0.2,2.4) -- (3.2,2.4)
+               (3.2,2.4) -- (3.4,2.1);
+
+\end{tikzpicture}
+
+\end{document}
