@@ -669,7 +669,36 @@ A와 B가 액체 상태에서는 완전히 섞일 수 있지만, 고체 상태�
     G_{\text{mixing}} &= N_A \mu_0 (T,P) + dG_{\text{mixing}}\\
     &= N_A \mu_0 (T,P) + N_B f(T,P) - N_B kT \ln N_A + N_B kT \ln N_B - N_B kT
 \end{align}
-따라서, 우리는 용매와 용질의 화학 퍼텐셜을 계산할 수 있다.
+따라서, 우리는 용매와 용질의 화학 퍼텐셜을 계산할 수 있다. $\mu_A$는 용매, $\mu_B$는 용질에 대한 값이다.
+\begin{align}
+    \mu_A &= \left( \frac{\partial G}{\partial N_A} \right)_{T,P,N_B} = \mu_0 (T,P) - \frac{N_B kT}{N_A}\\
+    \mu_B &= \left( \frac{\partial G}{\partial N_B} \right)_{T,P,N_A} = f(T,P) + kT \ln (N_B / N_A)
+\end{align}
+용매의 화학 퍼텐셜에서, 용질이 많아질 수록 $\mu_A$는 감소한다. 또한, 용질의 화학 퍼텐셜은 다음 이상기체의 화학 퍼텐셜 공식과 유사하다.
+\begin{equation}
+    \mu_(T,P) = \mu^\circ (T) + kT \ln (P/P^\circ)
+\end{equation}
+다음으로 넘어가기 전, 농도에 대해 얘기하자면, 몰농도(molarity)는 \underline{용액 1L 당 용질의 몰수}, 몰랄농도(molality)는 \underline{용매 1kg 당 용질의 몰수}이다.
+
+\newpage
+
+따라서, 용액의 몰랄농도를 $m$이라 하자.\footnote{일반적으로 몰 농도는 $M$, 몰랄 농도는 $m$을 자주 사용한다.} 그러면 $\mu_B$는 다음과 같다.
+\begin{equation}
+    \mu_B = \left( \frac{\partial G}{\partial N_B} \right)_{T,P,N_A} = f(T,P) + kT \ln (N_B / N_A) = \mu_B^\circ (T,P) + kT \ln m_B
+\end{equation}
+여기서, $\mu_B^\circ (T,P)$는 용질 B의 몰랄 농도 $m=1$일 때의 화학 퍼텐셜이다.\footnote{표준 상태라고도 부른다.}
+
+\vspace{3mm}\noindent
+\textbf{Application of $\mu_A, \mu_B$ in solutions (Osmotic pressure)}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{images/fig5_2.png}
+\end{figure}
+
+
+
+
 
 
 \end{document}
