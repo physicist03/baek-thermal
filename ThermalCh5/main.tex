@@ -443,7 +443,7 @@ $P-T$ 그래프 그릴 때, 경계선의 기울기 양상은 두 상의 $S,V$ �
 
 반데르 발스 방정식은 다음과 같다.
 \begin{equation}\label{eq:3-5}
-    \left( P + \frac{aN^2}{V^2} \right)(V-Nb) = NkT
+   \boxed{\left( P + \frac{aN^2}{V^2} \right)(V-Nb) = NkT}
 \end{equation}
 여기서, $a$는 분자의 양에 따른 비례상수, $b$는 분자가 이웃 분자와 닿아 있을 때, 분자 하나가 차지하는 최소한의 부피이다. 이 두 상수는 분자에 따라 다르다.
 
@@ -670,7 +670,7 @@ A와 B가 액체 상태에서는 완전히 섞일 수 있지만, 고체 상태�
     &= N_A \mu_0 (T,P) + N_B f(T,P) - N_B kT \ln N_A + N_B kT \ln N_B - N_B kT
 \end{align}
 따라서, 우리는 용매와 용질의 화학 퍼텐셜을 계산할 수 있다. $\mu_A$는 용매, $\mu_B$는 용질에 대한 값이다.
-\begin{align}
+\begin{align} \label{eq:5-10}
     \mu_A &= \left( \frac{\partial G}{\partial N_A} \right)_{T,P,N_B} = \mu_0 (T,P) - \frac{N_B kT}{N_A}\\
     \mu_B &= \left( \frac{\partial G}{\partial N_B} \right)_{T,P,N_A} = f(T,P) + kT \ln (N_B / N_A)
 \end{align}
@@ -696,8 +696,209 @@ A와 B가 액체 상태에서는 완전히 섞일 수 있지만, 고체 상태�
     \includegraphics[width=0.9\linewidth]{images/fig5_2.png}
 \end{figure}
 
+우리가 먼 옛날 생물 시간에 배웠던 삼투압(Osmotic pressure)에 대해 알아보도록 하자. 왼쪽 그림은 용매 분자만 통과 가능한 반투과성 막으로 갈라져있다. 용액 내 용매의 화학 퍼텐셜은 순수 용매보다 낮다. 입자들은 화학 퍼텐셜이 더 낮은 쪽으로 흐르기에, 용매 분자들이 순수 용매 쪽에서 용액 쪽으로 자발적으로 이동한다.
+
+우리는 오른쪽 그림처럼 적당한 압력을 가해 삼투압을 막아보고자 한다. (\ref{eq:5-10})을 통해 화학 퍼텐셜 차와 압력을 통해 식을 세우면 다음과 같다.
+\begin{equation}
+    \mu_0 (T,P_1) = \mu_0 (T,P_2) - \frac{N_B kT}{N_A}
+\end{equation}
+여기서, 두 압력이 그리 크지 않다고 가정하자. 근사를 때릴 수 있다.
+\begin{equation}
+    \mu_0 (T, P_2) \approx \mu_0 (T, P_1) + (P_2 - P_1) \frac{\partial \mu_0}{\partial P}
+    \quad \Rightarrow \quad (P_2 - P_1) \frac{\partial \mu_0}{\partial P} = \frac{N_B kT}{N_A}
+\end{equation}
+고정된 $T,N$에 대해 다음 관계식이 성립한다.
+\begin{equation}
+    \frac{\partial \mu_0}{\partial P} = \frac{\partial }{\partial P} \frac{G_0}{N_A} = \frac{1}{N_A} \frac{\partial G_0}{\partial P} = \frac{V}{N_A}
+\end{equation}
+두 식을 연립해주면 다음을 얻는다.
+\begin{equation}\label{eq:5-17}
+    \boxed{P_2 - P_1 = \frac{N_B kT}{V} = \frac{n_B RT}{V}} \quad (\text{$P_2-P_1$은 삼투압})
+\end{equation}
+(\ref{eq:5-17})의 관계를 \textcolor{blue}{반트호프 공식(Van't Hoff's formula)}라고 한다.
+
+\newpage
+
+\noindent
+\textbf{Application of $\mu_A, \mu_B$ in solutions \textcolor{blue}{(Boling and freezing points)}}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.3\linewidth]{images/fig5_3.png}
+\end{figure}
+
+용질이 존재하면 용매가 증발하려는 경향이 줄어든다. 그림은 용매 분자 A와 용질 분자 B가 존재하는 양상을 나타낸다. 고등학교 화학2에서 배웠던 증기압에 의한 용액의 총괄성 얘기다.
+
+화학 퍼텐셜에 대한 평형 조건(equilibrium condition)은 다음과 같다. 
+\begin{equation}
+    \mu_{A,\mathrm{liq}}(T, P) = \mu_{A,\mathrm{gas}}(T, P) \quad \Rightarrow \quad \mu_0(T, P) - \frac{N_B k T}{N_A} = \mu_{\mathrm{gas}}(T, P)
+\end{equation}
+$\mu$ 함수를 순수한 용매($P^\circ$) 근방에서 테일러 전개하여 라울 법칙을 유도해보자.
+\begin{equation}
+    \cancel{\mu_0 (T,P_0)} + (P - P_0) \frac{\partial \mu_0}{\partial P} - \frac{N_B kT}{N_A} = \cancel{\mu_\text{gas} (T,P_0)} + (P -P_0) \frac{\partial \mu_\text{gas}}{\partial P}
+\end{equation}
+$(\partial \mu / \partial P) = (V/N)$임을 이용하자.
+\begin{equation}
+    (P - P_0) \left( \frac{V}{N} \right)_{\text{liq}} - \frac{N_B kT }{N_A} = (P - P_0) \left( \frac{V}{N} \right)_{\text{gas}}
+\end{equation}
+$(V/N)$의 값은 gas일 때가 liq일 때보다 압도적으로 크고, gas에선 $kT/P_0$이므로,
+\begin{equation}
+    P - P_0 = -\frac{N_B}{N_A} P_0 \quad \Rightarrow \quad \boxed{\frac{P}{P_0} = 1-\frac{N_B}{N_A}} \quad \text{(Raoult's law)}
+\end{equation}
+분자들의 모형으로 해석하면, 증기압이 감소하는 이유는 용질을 첨가하면 액체 표면에 있는 용매 분자의 수가 줄어들기 때문이다.
+
+우리는 등압 상태로 가정하여 화학 퍼텐셜 평형 조건을 통해 끓는점 오름도 살펴볼 수 있다. 끓는점이 $T_0$면,
+\begin{equation}
+    \mu_0 (T_0, P) + (T-T_0) \frac{\partial \mu_0}{\partial T} - \frac{N_B kT}{N_A} = \mu_\text{gas} (T_0, P) + (T-T_0) \frac{\partial \mu_\text{gas}}{\partial T}
+\end{equation}
+$(\partial G / \partial T) = -S$임을 이용하자.
+\begin{equation}
+    -(T-T_0) \left( \frac{S}{N} \right)_{\text{liq}} - \frac{N_B kT}{N_A} = - (T- T_0) \left( \frac{S}{N} \right)_{\text{gas}}
+\end{equation}
+$S_\text{gas} - S_\text{liq} = L/T_0$이다. 따라서, $T\approx T_0$도 이용하면, 다음과 같이 끓는점 오름을 설명할 수 있다.
+\begin{equation}
+    T - T_0 = \frac{N_B kT \cdot T_0}{L} \approx \frac{N_B kT_0^2}{L} = \frac{n_B R T_0^2}{L}
+\end{equation}
 
 
+\newpage
+
+\section{Chemical Equilibrium}
+
+먼저, 가역 반응인 물의 자동 이온화를 생각해보자.
+\begin{equation}
+    \ch{H2 O} \leftrightarrow \ch{H+} + \ch{OH-}
+\end{equation}
+깁스 자유에너지의 측면에서, 이온들의 존재에 의해 엔트로피가 증가하기 떄문에 깁스 자유에너지가 줄어들 것이다.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.45\linewidth]{images/fig6_1.png}
+\end{figure}
+
+평형 상태에서 다음 조건을 만족한다.
+\begin{equation}\label{eq:6-2}
+    0 = dG = \sum_i \mu_i dN_i = \mu_{\ch{H2O}} N_{\ch{H2O}} + \mu_{\ch{H+}} N_{\ch{H+}} + \mu_{\ch{OH-}} N_{\ch{OH-}}
+\end{equation}
+여기서, 화학 반응식에 의해 $dN$은 순서대로 각각 -1, +1, +1로 결정된다. 이를 (\ref{eq:6-2})에 대입하면 평형 조건은
+\begin{equation}
+    \mu_{\ch{H2O}} = \mu_{\ch{H+}} + \mu_{\ch{OH-}}
+\end{equation}
+이다. 이제, 일반적인 반응의 평형 조건으로 확장해보자. 
+\begin{equation}
+        \nu_1 X_1 + \nu_2 X_2 + \cdots \leftrightarrow \nu_3 X_3 + \nu_4 X_4 + \cdots
+\end{equation}
+라는 반응식에서, 다음과 같이 평형 조건이 건설된다.
+\begin{equation}
+    \nu_1 \mu_1 + \nu_2 \mu_2 + \cdots = \nu_3 \mu_3 + \nu_4 \mu_4 + \cdots
+\end{equation}
+화학 퍼텐셜에 대한 식을 다시 정리해보자.
+\begin{itemize}
+    \item \textbf{Gas} : $\mu_\text{gas} = \mu^\circ + kT \ln (P/P^\circ)$
+    \item \textbf{Solvent} : $\mu_A = \mu_0 (T,P) - \dfrac{N_B kT}{N_A}$
+    \item \textbf{Solute} : $\mu_B = \mu^\circ (T,P) + kT \ln (m_B)$
+\end{itemize}
+우리는 4가지 예시를 들 수 있는데, 질소 고정, 물의 해리, 산소의 물 속 용해, 수소의 이온화이다. 하나씩 알아보면서 5장을 마무리짓도록 하자.
+
+\newpage
+
+\noindent
+\textbf{1. Nitrogen fixation (gas)}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.65\linewidth]{images/fig6_2.png}
+\end{figure}
+
+화학 반응식과 그에 따른 평형 조건은 다음과 같다.
+\begin{equation}
+    \ch{N2} + \ch{3 H2} \leftrightarrow \ch{2 NH3} \quad / \quad \mu_{\ch{N2}} + 3\mu_{\ch{H2}} = 2\mu_{\ch{NH3}}
+\end{equation}
+이상기체에서, $\mu_\text{gas} = \mu^\circ + kT \ln (P/P^\circ)$이므로, 이를 이용하면
+\begin{align}
+    \mu_{\ch{N2}}^\circ + kT \ln \left( \frac{P_{\ch{N2}}}{P^\circ} \right) + 3\mu_{\ch{H2}} + 3kT \ln \left( \frac{P_{\ch{H2}}}{P^\circ} \right) &= 2\mu_{\ch{NH3}} + 2 kT \left( \frac{P_{\ch{NH3}}}{P^\circ} \right)\\
+    kT \ln \left( \frac{P_{\ch{N2}}}{P^\circ} \right) + 3kT \ln \left( \frac{P_{\ch{H2}}}{P^\circ} \right) -2 kT \left( \frac{P_{\ch{NH3}}}{P^\circ} \right) &= 2\mu_{\ch{NH3}} -\mu_{\ch{N2}}^\circ -3\mu_{\ch{H2}}
+\end{align}
+양 변에 아보가드로 수를 곱해서 정리하면 다음과 같다.
+\begin{equation}
+    RT \ln \left( \frac{P_{\ch{N2}} P_{\ch{H2}}^3}{P_{\ch{NH3}}^2 (P^\circ)^2} \right) = \Delta G^\circ \quad \Rightarrow \quad \boxed{\frac{P_{\ch{N2}} P_{\ch{H2}}^3}{P_{\ch{NH3}}^2 (P^\circ)^2} = e^{-\Delta G^\circ /RT} \equiv K(T)}
+\end{equation}
+$K(T)$를 우리는 \underline{평형 상수}라고 한다. 평형 상수는 고온에서 작아진다. 그러면 저온에서 암모니아를 다루는게 이득 아니냐? 생각하겠지만, 평형 조건은 반응 속도에 무관하기 때문에 상관 없다.
+
+\vspace{3mm}\noindent
+\textbf{2. Dissociation of Water (solution)}
+
+앞서 봤던 물의 분해 반응식과 평형 조건을 가져오자.
+\begin{equation}
+    \ch{H2 O} \leftrightarrow \ch{H+} + \ch{OH-} \quad / \quad \mu_{\ch{H2O}} = \mu_{\ch{H+}} + \mu_{\ch{OH-}}
+\end{equation}
+분해가 묽은 용액에서 일어난다는 조건은 수식적으로 아주 좋은 근사 조건이다. 앞서 봤던 용액의 화학 퍼텐셜 조건을 이용하면 다음이 성립한다.
+\begin{align}
+    \text{Solvent} &: \mu_A = \mu_0 (T,P) - \frac{N_B kT}{N_A}\\
+    \text{Solute} &: \mu^\circ (T,P) + kT \ln m_B
+\end{align}
+이를 통해 다음과 같은 평형 조건을 얻을 수 있다.
+\begin{equation}
+    \mu_{\ch{H2 O}}^\circ = \mu_{\ch{H+}}^\circ + kT \ln m_{\ch{H+}} + \mu_{\ch{OH-}}^\circ + kT\ln m_{\ch{OH-}}
+\end{equation}
+양 변에 아보가드로 수 $N_A$를 곱하여 정리하면 다음과 같다.
+\begin{equation}
+    RT \ln (m_{\ch{H+}} \cdot m_{\ch{OH-}}) = -N_A (\mu_{\ch{H+}}^\circ + \mu_{\ch{OH-}}^\circ - \mu_{\ch{H2 O}}^\circ) = -\Delta G^\circ  \quad \Rightarrow \quad m_{\ch{H+}} \cdot m_{\ch{OH-}} = e^{-\Delta G^\circ / RT}
+\end{equation}
+Circ의 조건은 물은 순수한 물, 이온들은 1m의 몰랄농도일 때이다. 여기서, 고등학교 화학 1에서 배웠던 수소이온농도지수(pH)를 정의할 수 있는데,  알아둬야 하는 것은, \underline{엄밀히 pH는 몰랄 농도로 정의해야 한다}는 것이다!!\footnote{고교 화학에선 수소 이온의 몰 농도로 정의한다.}
+\begin{equation}
+    \boxed{\text{pH} \equiv -\log_{10} m_{\ch{H+}}}
+\end{equation}
+
+\newpage
+
+\noindent
+\textbf{3. Oxygen dissolving in water (gas, solution)}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.3\linewidth]{images/fig6_3.png}
+\end{figure}
+
+그림에서 일어나는 반응과, 표준 깁스 자유 에너지는 다음과 같다.
+\begin{equation}
+    \ch{O2} (g) \leftrightarrow \ch{O2} (aq), \quad \Delta G^\circ = 164\text{kJ}
+\end{equation}
+따라서, 평형 조건에선 $\mu_\text{gas} = \mu_\text{solute}$여야 하므로 다음이 성립한다.
+\begin{equation}
+    \mu_\text{gas}^\circ  + kT \ln \left( \frac{P}{P^\circ} \right) = \mu_\text{solute}^\circ + kT \ln m
+\end{equation}
+양 변에 아보가드로 수 $N_A$를 곱하여 정리하면 다음과 같다.
+\begin{align}
+    RT \ln \left( \frac{P/P^\circ}{m} \right) = N_A (\mu_\text{solute}^\circ - \mu_\text{gas}^\circ) = \Delta G^\circ \quad \Rightarrow \boxed{\frac{m}{P/P^\circ} = e^{-\Delta G\circ / RT}}
+\end{align}
+몰랄 농도와 $P,T$의 관계를 헨리 법칙(Henly's law)라고 한다.
+
+\vspace{3mm} \noindent
+\textbf{4. Ionization of hydrogen (gas, plasma)}
+
+수소의 이온화 반응식과 평형 조건은 다음과 같다. (p는 proton, e는 electron이다.)
+\begin{equation}\label{eq:6-19}
+    \ch{H} \leftrightarrow \ch{p} + \ch{e} \quad / \quad kT \ln \left( \frac{P_\text{H} P^\circ}{P_\text{p} P_\text{e}} \right) = \mu_\text{p}^\circ + \mu_\text{e}^\circ - \mu_\text{H}^\circ
+\end{equation}
+단원자 이상기체의 화학 퍼텐셜 값을 적용하면 다음과 같다.
+\begin{equation}
+    \mu = -kT \ln \left[ \frac{V}{N} \left( \frac{2 \pi m k T}{h^2} \right)^{3/2} \right]
+= -kT \ln \left[ \frac{kT}{P} \left( \frac{2 \pi m k T}{h^2} \right)^{3/2} \right]
+\end{equation}
+수소의 이온화 에너지 $I= 13.6$eV를 취해보도록 하자. 이를 (\ref{eq:6-19})에 대입하자.
+\begin{equation}
+    kT \ln\left( \frac{P_H P^\circ}{P_P P_e} \right) = -kT \ln \left[ \frac{kT}{P^\circ} \left( \frac{2\pi m_\text{P} kT}{h^2} \right)^{3/2} \right]- \cancel{ kT \ln \left[ \frac{2\pi m_\text{e} kT}{h^2} \right]^{3/2}} + \cancel{kT \ln \left[ \frac{kT}{P^\circ} \left( \frac{2\pi m_\text{H} kT}{h^2} \right)^{3/2} \right]} + I
+\end{equation}
+따라서, 간단히 정리하면 다음과 같은 관계를 얻을 수 있다.
+\begin{equation}
+    - \ln \left( \frac{P_\text{H} P^\circ}{P_\text{P} P_e} \right) = \ln \left[ \frac{kT}{P^\circ} \left( \frac{2\pi m_e kT}{h^2} \right)^{3/2} \right] - \frac{I}{kT}
+\end{equation}
+최종적으로, 수소의 이온화 정도를 나타낸 비율은 다음과 같다.
+\begin{equation}\label{eq:6-23}
+    \boxed{\frac{P_\text{P}}{P_\text{H}} = \frac{kT}{P_e} \left( \frac{2\pi m_e kT}{h^2} \right)^{3/2} e^{-I/kT}}
+\end{equation}
+(\ref{eq:6-23})의 관계를 사하 방정식(Saha equation)이라 한다. 이는 고온 플라즈마에서 수소가 얼만큼 이온화되었는지 알려주는 지표로써 사용할 수 있다.
 
 
 
