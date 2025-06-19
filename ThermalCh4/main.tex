@@ -329,5 +329,39 @@
     \includegraphics[width=0.55\linewidth]{images/fig4_2.png}
 \end{figure}
 
+한 쪽에서는 압력 $P_i$로 피스톤이 유체를 밀어 넣고, 다른 쪽에서는 압력 $P_f$로 피스톤이 뒤로 움직이며 공간을 만들어 주는 그림을 생각해보자. 열 교환이 없으니 $Q=0$일 것이다. 전체 에너지 변화를 계산해보자!
+\begin{align}
+    U_f - U_i = Q - (-W) = 0 + W_\text{left} + W_\text{right} \quad &\Rightarrow \quad U_f - U_i = P_i V_i - P_f V_f\\
+    \Rightarrow \ \ U_f + P_f V_f = U_i + P_i V_i \quad &\Rightarrow \quad H_f = H_i
+\end{align}
+따라서, 스로틀링 중에는 엔탈피가 보존된다! 이런 쓰로틀링 과정의 목적은 \textcolor{blue}{유체를 냉각시키는 것이다.} 만약, 유체가 이상기체(ideal gas)라면?? 일단 일을 하진 않는다. 엔탈피를 표현해보자. 이상기체의 자유도(DOF)는 $f$이다.
+\begin{equation}
+    H = P + UV = \frac{f}{2} NkT + NkT = \frac{f + 2}{2} NkT
+\end{equation}
+스로틀링 밸브를 통과할 때 왜 실제 유체는 온도가 떨어지는가? 그 이유는 엔탈피 보존에 있다. 만약, 이상기체라면 온도도 변하지 않아야겠지만, 실제 기체의 에너지는 $U = U_k + U_p$로 표현된다. $U_p$는 분자간 인력에 의해 음수이다. 압력이 줄어들면 $U_p$가 0에 가까워지고(커지고), 엔탈피 보존을 위해 $U_k$가 감소하게 된다. 운동에너지가 감소했으니 속력도 줄었을 것이고, 그러므로 당연히$\sim$ 유체의 온도도 떨어지게 된다.
+
+\newpage
+
+\noindent
+앞서 배웠던 실재 냉장고에서 성능계수(COP)는 다음과 같이 계산된다.
+\begin{equation}
+    \text{COP} = \frac{Q_c}{Q_h - Q_c} = \frac{H_1 - H_4}{H_2 - H_3 - H_1 + H_4} = \frac{H_1 - H_3}{H_2 - H_1} \qquad \text{when }\  (H_3 = H_4)
+\end{equation}
+
+\noindent
+\textbf{Liquefaction of gases}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/fig4_3.png}
+\end{figure}
+
+\noindent
+우리가 앞서 배웠던 스로틀링 과정은 이산화탄소나 질소같이 100K 아래로 \underline{기체들을 냉각시킬 때} 쓴다!
+\begin{enumerate}
+    \item $\ch{CO2}(g)$를 등온 압축 시키면 액화되고, 상온 60atm에서 유지된다. 만약 5.2atm 이하로 떨어지면 액체가 존재할 수 없고 바로 드라이아이스로 승화가 일어난다.
+    \item $\ch{N2}(g)$를 냉각시키는 과정은 좀 복잡하다. 100atm까지 압력을 걸어도, 300K에선 겨우 280K로 내려가기만 하고 상은 여전히 기체다. 따라서 110K 아래에서 시작해야만 100atm에서 스로틀링 효과로 액화질소를 만들 수 있다. 하지만! 위 그림과 같이 Hampson–Linde cycle을 통해 문제를 해소했다. 그 원리는 냉각된 기체를 다시 열교환기로 보내서 들어오는 기체를 냉각시키는 데 재활용하여 기체의 온도를 꾸역꾸역 내려버린 것이다.
+    \item $\ch{H2}(g)$나 $\ch{He}(g)$같은 친구는 Hampson–Linde cycle을 써도 액화가 안된다 (뭐 어쩌라는거야?) 수소랑 헬륨은 분자간 인력이 기체에서 매우 약하니까, 스로틀링 효과를 거는 순간 온도가 오히려 올라가버린다!! (세상에..) 그렇다. 얘들은 인력보단 반발력에 의한 에너지가 압도적으로 영향력이 크다. \textcolor{blue}{저 둘을 액화시키려면, 실온보다 훨씬 낮은 온도에서 분자의 속도를 확 줄여 인력이 반발력보다 중요하게 만들어야 한다!} 따라서, 수소는 204K, 헬륨은 43K 이하에서 스로틀링을 걸어줘야 한다.
+\end{enumerate}
 
 \end{document}

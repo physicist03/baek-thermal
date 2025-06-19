@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1750366880 "c:/Users/ket16/Desktop/git-notes/baek-thermal/ThermalCh4/main.tex" "main.pdf" "main" 1750366883 0
-  "c:/Users/ket16/Desktop/git-notes/baek-thermal/ThermalCh4/main.tex" 1750366879 17367 0f0b1ba6cd4149a6b6b11fa2f590e94d ""
+["pdflatex"] 1750370855 "c:/Users/ket16/Desktop/git-notes/baek-thermal/ThermalCh4/main.tex" "main.pdf" "main" 1750370858 0
+  "c:/Users/ket16/Desktop/git-notes/baek-thermal/ThermalCh4/main.tex" 1750370855 20976 43818b569bdb15e63f823e939af932bf ""
   "c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1694845491 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "c:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1694846139 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm0600.tfm" 1694845866 1536 12e8c510d3e158fdd0e9a42e75118bd9 ""
@@ -70,6 +70,7 @@
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc0.tfm" 1694847232 1252 550ca25062ebc90c66b675808adf8c6d ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc1.tfm" 1694847232 1256 65e23cc1bcd2b64aca8af1f732fed042 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc2.tfm" 1694847232 1252 818c5e98aaef778763029f70d8876c68 ""
+  "c:/texlive/2023/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc3.tfm" 1694847232 1268 1364c73bafbd0d19f22e0484c465f663 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc4.tfm" 1694847232 1260 9b758ab7a4dde34b1a04a2b2aae66eac ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc5.tfm" 1694847232 1240 519d105c3f882d4e81d993bd5669c5c8 ""
   "c:/texlive/2023/texmf-dist/fonts/tfm/public/nanumtype1/nanummjmc6.tfm" 1694847232 1260 8036be1c5030d1ed0ea8755dd5820fff ""
@@ -154,6 +155,7 @@
   "c:/texlive/2023/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc0.pfb" 1694847232 255779 254eea551840982046a8d4cce781fb7f ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc1.pfb" 1694847232 161865 1dd62a4e3dfd56fb148a53a74cc00076 ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc2.pfb" 1694847232 153768 13ef9e679a6f3e2ee7c7f2d6d2a42147 ""
+  "c:/texlive/2023/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc3.pfb" 1694847232 159636 6d6cfd44b60b2f2596a759a645ce3480 ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc4.pfb" 1694847232 179426 cbc274442fcdd9ad072514831c28eb6f ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc5.pfb" 1694847232 160980 fcd07ba65bb75d38cc19e2f85a67f26d ""
   "c:/texlive/2023/texmf-dist/fonts/type1/public/nanumtype1/nanummjmc6.pfb" 1694847232 187129 99527c44c085682e41929ee94c329546 ""
@@ -345,9 +347,10 @@
   "images/fig3_4.png" 1750365443 228862 1bd2ad7e4b92bd56523803563f068185 ""
   "images/fig4_1.png" 1750365819 53558 7fa83e04d60c757a54d2b00b54b60680 ""
   "images/fig4_2.png" 1750366852 9979 34d647e221cf56a44b623e112e305d64 ""
-  "main.aux" 1750366882 1209 a28a7cdfc9117ae775f06099ae73b9a0 "pdflatex"
-  "main.out" 1750366882 520 ccd114a3537e39570f1dfb5ffbc7a225 "pdflatex"
-  "main.tex" 1750366879 17367 0f0b1ba6cd4149a6b6b11fa2f590e94d ""
+  "images/fig4_3.png" 1750369581 25285 f3f4dde14e2ab80cca95b97c972d2121 ""
+  "main.aux" 1750370857 1209 99afce0f2311d420d50e3a21e0934eba "pdflatex"
+  "main.out" 1750370857 520 ccd114a3537e39570f1dfb5ffbc7a225 "pdflatex"
+  "main.tex" 1750370855 20976 43818b569bdb15e63f823e939af932bf ""
   (generated)
   "main.aux"
   "main.log"
